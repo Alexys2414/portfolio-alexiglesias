@@ -1,13 +1,128 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'KageRetro';
+  src: url('./fonts/Kage-Retro.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import url("https://fonts.googleapis.com/css?family=Chango&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #4CAF50; /* Verde hoja */
+  --color-secondary: #A17EC5; /* Morado suave */
+  --color-accent: #FFD700; /* Dorado */
+  --color-background: #FDF6E3; /* Fondo claro */
+  --color-text: #333333; /* Texto oscuro */
+  --color-link: #4CAF50; /* Enlaces en verde hoja */
+}
+
+body.dark-mode {
+  --color-primary: #2E7D32; /* Verde oscuro */
+  --color-secondary: #6A1B9A; /* Morado oscuro */
+  --color-accent: #FF8F00; /* Acento naranja */
+  --color-background: #121212; /* Fondo oscuro */
+  --color-text: #B3E5FC; /* Texto azul claro */
+  --color-link: #2E7D32; /* Enlaces en verde oscuro */
+}
+
+body {
+  font-family: 'KageRetro', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+h1, h2, h3 {
+  color: var(--color-primary);
+  text-align: center;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Estilo de imagen retro */
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bordes retro */
+.box {
+  border: 5px solid var(--color-primary);
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(--color-background);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Personalización de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra */
+}
+
+/* Fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background: #A4D4C7; /* Verde claro similar al de la imagen */
+  border-radius: 10px;
+}
+
+/* Thumb de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background: #ffffff; /* Color blanco de la barrita */
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 #333; /* Sombra en el thumb */
+}
+
+/* Hover del thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #f0f0f0; /* Color más claro al hacer hover */
+  box-shadow: 3px 3px 0 #333; /* Mantiene la sombra */
+}
+
+/* Personalización de la esquina de la barra de desplazamiento */
+::-webkit-scrollbar-corner {
+  background-color: #A4D4C7; /* Color verde claro para la esquina de la barra */
 }

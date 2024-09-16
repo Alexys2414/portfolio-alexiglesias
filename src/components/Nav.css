@@ -1,0 +1,125 @@
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30' opacity='0.2' width='80' height='60'%3E%3Cpath d='M 0 15 q 10 -7 20 0 t 20 0' fill='none' stroke='hsl(0, 0%25, 100%25)' stroke-linecap='round' stroke-width='2' /%3E%3C/svg%3E"), #fb1f34;
+  color: hsl(0, 0%, 100%);
+  background-position-x: 50%;
+  background-size: 50px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden; /* Inicialmente oculto */
+  opacity: 0;
+  z-index: 10;  /* Para superponer el nav sobre el header */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-container.open {
+  visibility: visible; /* Mostrar cuando está abierto */
+  opacity: 1;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Estilos del botón de cerrar (X) */
+.close-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem; /* Botón a la izquierda */
+    width: 4rem;
+    height: 4rem;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .close-button svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(5px 5px hsl(0, 0%, 20%));
+  }
+  .close-button svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(5px 5px hsl(0, 0%, 20%));
+  }
+  button .translate {
+    transition: transform 0.25s ease-in-out;
+    transition-delay: 0.25s;
+  }
+  button .rotate {
+    transition: transform 0.25s ease-in-out;
+    transition-delay: 0s;
+  }
+  button.open .translate {
+    transform: translateY(0);
+    transition-delay: 0s;
+  }
+  button.open .rotate {
+    transform: rotate(0);
+    transition-delay: 0.25s;
+  }
+
+/* Estilos del nav y enlaces */
+nav {
+  width: 100vmin;
+  visibility: hidden;
+}
+
+nav.open {
+  visibility: visible;
+}
+
+nav svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+nav svg text {
+  text-shadow: 0px 0.2rem hsl(0, 0%, 20%);
+  font-family: "Chango", cursive;
+  fill: currentColor;
+  font-size: 2.255rem;
+  letter-spacing: 0px;
+  transition-property: letter-spacing, text-shadow;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+nav svg a {
+  color: inherit;
+  outline: none;
+}
+
+nav svg a:hover text,
+nav svg a:focus text {
+  letter-spacing: 5px;
+  text-shadow: 0px 0.5rem hsl(0, 0%, 20%);
+}
+
+.language-switcher {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+  .flag-icon {
+    width: 40px;
+    height: 40px;
+  }
+  

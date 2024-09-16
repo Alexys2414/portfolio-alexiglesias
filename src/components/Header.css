@@ -1,0 +1,84 @@
+.header {
+    background-image: url('../assets/background-happy-transformed.jpeg'); /* Asegúrate de que la imagen esté en la ruta correcta */
+    background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.menu-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-text {
+  position: absolute;
+  top: 12px;
+  font-family: 'KageRetro', sans-serif;
+  font-size: 23px;
+  color: white;
+  text-shadow: 2px 2px 0 #333;
+  line-height: 1.6;
+}
+
+.menu-stars {
+  position: absolute;
+}
+
+.star-small {
+  width: 40px;
+  height: 40px;
+  /* margin-right: 5px; */
+  top: 24px;
+  position: relative;
+  right: 21px;
+}
+
+.star-small:last-of-type{
+    /* bottom: 38px; */
+    top: 33px;
+    width: 30px;
+    height: 30px;
+    right: 35px;
+}
+
+.header-content {
+  text-align: center;
+  position: relative;
+}
+
+.main-title {
+  font-family: 'KageRetro', sans-serif;
+  font-size: 120px;
+  color: white;
+  text-shadow: 3px 3px 0 #333;
+  margin: 0;
+}
+
+.stars {
+  position: absolute;
+  left: 300px;
+  top: 85px;
+}
+
+.star {
+  width: 100px;
+  height: 100px;
+}
+
+.star:last-of-type{
+  right: 60px;
+  top: 50px;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
