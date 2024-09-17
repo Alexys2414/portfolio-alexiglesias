@@ -13,8 +13,8 @@
   box-sizing: border-box;
 }
 
+/* Modo Claro */
 :root {
-  /* Modo Claro */
   --color-background: #f1e5c9; /* Fondo claro */
   --color-primary: #699488;    /* Verde suave */
   --color-secondary: #f9c05f;  /* Amarillo brillante */
@@ -107,24 +107,39 @@ button {
 
 /* Fondo de la barra de desplazamiento */
 ::-webkit-scrollbar-track {
-  background: #A4D4C7; /* Verde claro similar al de la imagen */
+  background: var(--color-primary); /* Verde claro similar al de la imagen */
   border-radius: 10px;
 }
 
 /* Thumb de la barra de desplazamiento */
 ::-webkit-scrollbar-thumb {
-  background: #ffffff; /* Color blanco de la barrita */
+  background: var(--color-light); /* Color blanco de la barrita */
   border-radius: 10px;
   box-shadow: 3px 3px 0 #333; /* Sombra en el thumb */
 }
 
 /* Hover del thumb */
 ::-webkit-scrollbar-thumb:hover {
-  background: #f0f0f0; /* Color más claro al hacer hover */
+  background: var(--color-light); /* Color más claro al hacer hover */
   box-shadow: 3px 3px 0 #333; /* Mantiene la sombra */
 }
 
 /* Personalización de la esquina de la barra de desplazamiento */
 ::-webkit-scrollbar-corner {
-  background-color: #A4D4C7; /* Color verde claro para la esquina de la barra */
+  background-color: var(--color-primary); /* Color verde claro para la esquina de la barra */
+}
+
+
+/* Estilo de selección personalizada para la página */
+::selection {
+  background-color: var(--color-primary); /* Cambia este color al tono que desees */
+  color: var(--color-light); /* El color del texto cuando está seleccionado */
+  text-shadow: 2px 2px 0 var(--color-text); /* Sombra de texto */
+}
+
+/* Para navegadores Webkit como Chrome o Safari */
+::-moz-selection {
+  background-color: var(--color-primary); /* Cambia este color al tono que desees */
+  color: var(--color-light); /* El color del texto cuando está seleccionado */
+  text-shadow: 2px 2px 0 var(--color-text); /* Sombra de texto */
 }
