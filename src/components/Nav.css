@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30' opacity='0.2' width='80' height='60'%3E%3Cpath d='M 0 15 q 10 -7 20 0 t 20 0' fill='none' stroke='hsl(0, 0%25, 100%25)' stroke-linecap='round' stroke-width='2' /%3E%3C/svg%3E"), #fb1f34;
-  color: hsl(0, 0%, 100%);
+  color: var(--color-light);
   background-position-x: 50%;
   background-size: 50px;
   min-height: 100vh;
@@ -32,46 +32,44 @@
 
 /* Estilos del botón de cerrar (X) */
 .close-button {
-    position: absolute;
-    top: 1rem;
-    left: 1rem; /* Botón a la izquierda */
-    width: 4rem;
-    height: 4rem;
-    background: none;
-    border: none;
-    color: inherit;
-    cursor: pointer;
-    padding: 0.5rem;
-  }
+  position: absolute;
+  top: 1rem;
+  left: 1rem; /* Botón a la izquierda */
+  width: 4rem;
+  height: 4rem;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.5rem;
+}
 
-  .close-button svg {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: drop-shadow(5px 5px hsl(0, 0%, 20%));
-  }
-  .close-button svg {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: drop-shadow(5px 5px hsl(0, 0%, 20%));
-  }
-  button .translate {
-    transition: transform 0.25s ease-in-out;
-    transition-delay: 0.25s;
-  }
-  button .rotate {
-    transition: transform 0.25s ease-in-out;
-    transition-delay: 0s;
-  }
-  button.open .translate {
-    transform: translateY(0);
-    transition-delay: 0s;
-  }
-  button.open .rotate {
-    transform: rotate(0);
-    transition-delay: 0.25s;
-  }
+.close-button svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(5px 5px var(--color-text));
+}
+
+button .translate {
+  transition: transform 0.25s ease-in-out;
+  transition-delay: 0.25s;
+}
+
+button .rotate {
+  transition: transform 0.25s ease-in-out;
+  transition-delay: 0s;
+}
+
+button.open .translate {
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+button.open .rotate {
+  transform: rotate(0);
+  transition-delay: 0.25s;
+}
 
 /* Estilos del nav y enlaces */
 nav {
@@ -90,7 +88,7 @@ nav svg {
 }
 
 nav svg text {
-  text-shadow: 0px 0.2rem hsl(0, 0%, 20%);
+  text-shadow: 0px 0.2rem var(--color-text);
   font-family: "Chango", cursive;
   fill: currentColor;
   font-size: 2.255rem;
@@ -108,18 +106,17 @@ nav svg a {
 nav svg a:hover text,
 nav svg a:focus text {
   letter-spacing: 5px;
-  text-shadow: 0px 0.5rem hsl(0, 0%, 20%);
+  text-shadow: 0px 0.5rem var(--color-text);
 }
 
 .language-switcher {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-  }
-  
-  .flag-icon {
-    width: 40px;
-    height: 40px;
-  }
-  
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.flag-icon {
+  width: 40px;
+  height: 40px;
+}

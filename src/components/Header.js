@@ -1,21 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Header.css';
-import star from '../assets/stars.svg'; 
-import background from '../assets/background-happy-transformed.jpeg'; 
-import Nav from './Nav'; // Importa el componente de navegación
+import star from '../assets/stars.svg';
+import Nav from './Nav'; 
 
-const Header = () => {
-  const [isNavOpen, setNavOpen] = useState(false);
-
-  const toggleNav = () => {
-    setNavOpen(!isNavOpen);
-  };
-
+const Header = ({ isNavOpen, toggleNav }) => {
   return (
     <header className="header">
       <div className="menu-container" onClick={toggleNav}>
         <svg xmlns="http://www.w3.org/2000/svg" width="120" height="60" viewBox="0 0 200 100">
-          <ellipse cx="100" cy="50" rx="90" ry="40" stroke="white" fill="none" stroke-width="3" />
+          <ellipse cx="100" cy="50" rx="90" ry="40" stroke="white" fill="none" strokeWidth="3" />
         </svg>
         <div className="menu-text">
           <p>Menu</p>
@@ -34,11 +27,9 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Componente Nav que se despliega */}
       <Nav isOpen={isNavOpen} toggleNav={toggleNav} />
     </header>
   );
 };
 
 export default Header;
-  

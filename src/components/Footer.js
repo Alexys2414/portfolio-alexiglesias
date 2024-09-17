@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-content">
         <h2 className="footer-title">¡Vamos a Conectar!</h2>
         <div className="social-media">
-          <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer" className="retro-button">
+          <a href="https://github.com/Alexys2414" target="_blank" rel="noopener noreferrer" className="retro-button">
             GitHub
           </a>
           <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer" className="retro-button">

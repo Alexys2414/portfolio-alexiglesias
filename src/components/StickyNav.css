@@ -1,0 +1,67 @@
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95px;
+  background-color: var(--color-background); /* Fondo claro */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  transform: translateY(-100%); /* Inicialmente oculto por encima */
+  opacity: 0; /* Hacerlo invisible al inicio */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transiciones */
+}
+
+.sticky-nav.show {
+  transform: translateY(0); /* Deslizar hacia abajo cuando se muestre */
+  opacity: 1; /* Hacer visible */
+}
+
+/* Nuevas clases para el StickyNav que replican el estilo del Header pero no lo afectan */
+.sticky-menu-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sticky-menu-text {
+  position: absolute;
+  top: 12px;
+  font-family: 'KageRetro', sans-serif;
+  font-size: 23px;
+  color: var(--color-light);
+  text-shadow: 2px 2px 0 var(--color-text);
+  line-height: 1.6;
+}
+
+.sticky-menu-stars {
+  position: absolute;
+}
+
+.sticky-star-small {
+  width: 40px;
+  height: 40px;
+  top: 24px;
+  position: relative;
+  right: 21px;
+}
+
+.sticky-star-small:last-of-type {
+  top: 33px;
+  width: 30px;
+  height: 30px;
+  right: 35px;
+}
+
+.sticky-title {
+  font-family: 'KageRetro', sans-serif;
+  font-size: 22px;
+  color: var(--color-text);
+  text-shadow: 2px 2px 0 var(--color-light);
+}

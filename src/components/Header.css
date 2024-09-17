@@ -1,6 +1,6 @@
 .header {
-    background-image: url('../assets/background-happy-transformed.jpeg'); /* Asegúrate de que la imagen esté en la ruta correcta */
-    background-size: cover;
+  background-image: url('../assets/background-happy-transformed.jpeg'); /* Asegúrate de que la imagen esté en la ruta correcta */
+  background-size: cover;
   background-position: center;
   height: 100vh;
   display: flex;
@@ -25,8 +25,8 @@
   top: 12px;
   font-family: 'KageRetro', sans-serif;
   font-size: 23px;
-  color: white;
-  text-shadow: 2px 2px 0 #333;
+  color: var(--color-light);
+  text-shadow: 2px 2px 0 var(--color-text);
   line-height: 1.6;
 }
 
@@ -37,18 +37,16 @@
 .star-small {
   width: 40px;
   height: 40px;
-  /* margin-right: 5px; */
   top: 24px;
   position: relative;
   right: 21px;
 }
 
-.star-small:last-of-type{
-    /* bottom: 38px; */
-    top: 33px;
-    width: 30px;
-    height: 30px;
-    right: 35px;
+.star-small:last-of-type {
+  top: 33px;
+  width: 30px;
+  height: 30px;
+  right: 35px;
 }
 
 .header-content {
@@ -59,8 +57,8 @@
 .main-title {
   font-family: 'KageRetro', sans-serif;
   font-size: 120px;
-  color: white;
-  text-shadow: 3px 3px 0 #333;
+  color: var(--color-light);
+  text-shadow: 3px 3px 0 var(--color-text);
   margin: 0;
 }
 
@@ -75,7 +73,7 @@
   height: 100px;
 }
 
-.star:last-of-type{
+.star:last-of-type {
   right: 60px;
   top: 50px;
   position: absolute;

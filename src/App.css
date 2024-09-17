@@ -6,29 +6,6 @@
     margin: 0;
   }
   
-  /* Menú sticky */
-  .sticky-nav {
-    position: sticky;
-    top: 0;
-    background-color: #fb1f34; /* Color retro */
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem;
-    z-index: 100;
-    border-bottom: 2px solid #fff;
-  }
-  
-  .sticky-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: all 0.3s ease;
-  }
-  
-  .sticky-nav a:hover {
-    color: #ffd700; /* Color dorado retro */
-  }
-  
   /* Secciones */
   .section {
     min-height: 100vh;

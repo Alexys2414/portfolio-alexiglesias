@@ -3,9 +3,16 @@ import './Nav.css';
 import anime from 'animejs'; // Necesitas anime.js instalado: npm install animejs
 
 const Nav = ({ isOpen, toggleNav }) => {
-
+  
   useEffect(() => {
     const nav = document.querySelector('.nav-menu'); // El nav svg que contiene los enlaces
+
+    // Desactivar el scroll cuando el nav está abierto
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'; // Desactiva el scroll del body
+    } else {
+      document.body.style.overflow = 'auto'; // Reactiva el scroll cuando se cierra el nav
+    }
 
     // Antes de comenzar una nueva animación, eliminamos cualquier animación previa para evitar conflictos.
     anime.remove('textPath');
@@ -33,6 +40,11 @@ const Nav = ({ isOpen, toggleNav }) => {
         }
       },
     });
+
+    // Limpiar overflow cuando el componente se desmonte (opcional, por si acaso)
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
   }, [isOpen]);
 
   // Función para manejar el clic en los enlaces y hacer el smooth scroll
